@@ -2428,7 +2428,7 @@ input, select, textarea {
 		padding: 0 2.75em;
 		text-align: center;
 		text-decoration: none;
-		text-transform: uppercase;
+		text-transform: none;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
