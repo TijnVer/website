@@ -3844,6 +3844,13 @@ input, select, textarea {
 		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/MSVUopbaan.jpg");
 	}
 
+	.website-page #main > header {
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/WebsiteCoderen.png");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/WebsiteCoderen.png");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/WebsiteCoderen.png");
+		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/WebsiteCoderen.png");
+	}
+
 	.msvu-page #main > header .more {
 		-moz-transition: -moz-transform 0.75s ease, opacity 0.75s ease;
 		-webkit-transition: -webkit-transform 0.75s ease, opacity 0.75s ease;
