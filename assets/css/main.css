@@ -3841,6 +3841,13 @@ input, select, textarea {
 		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/MSVUopbaan.jpg");
 		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/MSVUopbaan.jpg");
 		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/MSVUopbaan.jpg");
+		height: 80vh;
+	}
+
+	@media screen and (max-width: 736px) {
+		.msvu-page #main > header {
+			height: 30vh;
+		}
 	}
 
 	.website-page #main > header {
