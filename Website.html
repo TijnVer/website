@@ -412,6 +412,25 @@
 		</article>
 
 	</div>
+	<p id="laatst geüpdatet: " style="text-align: center; font-size: smaller;">Laatst bijgewerkt: <span id="last-updated-date"></span></p>
+									<script>
+										fetch('https://api.github.com/repos/TijnVer/website/commits?path=Website.html')
+											.then(response => response.json())
+											.then(data => {
+												const lastCommitDate = new Date(data[0].commit.author.date);
+												document.getElementById('last-updated-date').textContent = lastCommitDate.toLocaleString('nl-NL', {
+													year: 'numeric',
+													month: 'long',
+													day: 'numeric',
+													hour: '2-digit',
+													minute: '2-digit'
+												});
+											})
+											.catch(error => {
+												console.error('Error fetching last commit date:', error);
+												document.getElementById('last-updated-date').textContent = 'Onbekend';
+											});
+									</script>
 	</section>
 	</article>
 
