@@ -52,7 +52,7 @@
 
 								<section>
 									<nav style="text-align: center;">
-										<iframe width="50%" src="https://www.youtube.com/embed/M0h__zjl-cc" title="start van bouw modelspoorbaan" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="aspect-ratio: 16/9;"></iframe>
+										<iframe width="50%" src="https://www.youtube.com/embed/CO6iIXnjJs8" title="start van bouw modelspoorbaan" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="aspect-ratio: 16/9;"></iframe>
 										<p>Navigeer snel naar de verschillende secties:</p>
 										<ul style="list-style: none; padding: 0;">
 											<li style="display: inline; margin: 0 10px;"><a href="#De Bouw" class="button primary scrolly">De Bouw</a></li>
@@ -78,7 +78,10 @@
 										<section id="Wissels">
 											<h3>Wissels bedienen</h3>
 											<p><span class="image left"><img src="images/marklinWisselSolenoide.jpg" alt="" /><br><img src="images/solenoide.jpg" alt="" /></span>Om de wissels automatisch te wisselen kun je ervoor kiezen om een Märklin solenoïde te kopen. Dit kost echter 13 keer zoveel als een servomotor (van €2) op dezelfde manier aan te sturen is. Deze is niet zo plat en compact waardoor het op een tafel gelegd kan worden. De servomotor steekt uit aan de onderkant van de baan maar aangezien ik mijn baan toch op een talud wil leggen is dit geen probleem en kan ik het verwerken onder de rails (ook een stuk fijner voor de bekabeling). Hieronder het 3D-ontwerp:</p>
-											<iframe src="https://gmail4244840.autodesk360.com/shares/public/SH286ddQT78850c0d8a4802bb567ca6019fe?mode=embed" width="100%" height="auto" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" frameborder="0" style="display: block; margin: 0 auto; aspect-ratio: 16/9;"></iframe>
+											<div style="display: flex; justify-content: space-between; align-items: center;">
+												<iframe width="49%" height="400" src="https://www.youtube.com/embed/Z-vnspSFeOE" title="servowissel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+												<iframe src="https://gmail4244840.autodesk360.com/shares/public/SH286ddQT78850c0d8a4802bb567ca6019fe?mode=embed" width="49%" height="400" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" frameborder="0"></iframe>
+											</div>
 											<p>Hier kan je het bestand downloaden: <a href="https://gmail4244840.autodesk360.com/g/projects/20240925809892976/data/dXJuOmFkc2sud2lwcHJvZDpmcy5mb2xkZXI6Y28uVGJiNDRfZkZSS1dIVXA0X1ZZWGg0dw/dXJuOmFkc2sud2lwcHJvZDpkbS5saW5lYWdlOk80M28zTEYyUzlDQml5d2hncHNpaHc/overview" target="_blank">Download link</a></p>
 										</section>
 										<hr />
@@ -94,13 +97,37 @@
 										<p>Modellen te downloaden op <a href="https://gmail4244840.autodesk360.com/shares/public/SH286ddQT78850c0d8a4ca58e7bf3f2fddff" target="_blank">deze link</a>.</p>
 									</section>
 									<hr/>
-									<section id="Seinen">
+									<section id = "Fotogrammetrie">
+										<h3>Fotogrammetrie</h3>
+										<p>Deatails in je 3d ontwerp kan veel tijd innemen. Vooral natuurlijke dingen zoals mos groei op beton is moeilijk zelf na te maken. Daarvoor is Fotogrammetrie een gepaste optie. Door veel foto's te maken van een onderwerp en je computer een nacht te laten nadenken kom je uit op een 3d model. Met een beetje nabewerking is deze ook printbaar.</p>
+										
+									</section>
+										<section id="Seinen">
 										<h3>Seinen</h3>
 										<p>De seinen wil ik zelf gaan 3D printen met LED-lampjes erin. Deze ga ik via een multiplexer aansturen.</p>
 									</section>
+								
 									
 									<hr />
-									
+									<p id="laatst geüpdatet: " style="text-align: center; font-size: smaller;">Laatst bijgewerkt: <span id="last-updated-date"></span></p>
+									<script>
+										fetch('https://api.github.com/repos/TijnVer/website/commits?path=modelspoorbaan.html')
+											.then(response => response.json())
+											.then(data => {
+												const lastCommitDate = new Date(data[0].commit.author.date);
+												document.getElementById('last-updated-date').textContent = lastCommitDate.toLocaleString('nl-NL', {
+													year: 'numeric',
+													month: 'long',
+													day: 'numeric',
+													hour: '2-digit',
+													minute: '2-digit'
+												});
+											})
+											.catch(error => {
+												console.error('Error fetching last commit date:', error);
+												document.getElementById('last-updated-date').textContent = 'Onbekend';
+											});
+									</script>
 								</section>
 							</div>
 						</section>
