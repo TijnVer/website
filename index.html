@@ -161,21 +161,8 @@
 							class="label">GitHub</span></a> <span style="font-size: smaller;">GitHub</span></li>
 			</ul>
 
-			<p id="visitor-counter" style="text-align: center; font-size: smaller;">Bezoekers: <span id="visitor-count">Laden...</span></p>
 			<p id="laatst geüpdatet: " style="text-align: center; font-size: smaller;">Laatst bijgewerkt: <span id="last-updated-date"></span></p>
 			<script>
-				// Visitor counter logic
-				const visitorCountKey = 'visitorCount';
-				let visitorCount = localStorage.getItem(visitorCountKey);
-
-				if (!visitorCount) {
-					visitorCount = 1;
-				} else {
-					visitorCount = parseInt(visitorCount) + 1;
-				}
-
-				localStorage.setItem(visitorCountKey, visitorCount);
-				document.getElementById('visitor-count').textContent = visitorCount;
 
 				// ...existing script for last updated date...
 				fetch('https://api.github.com/repos/TijnVer/website/commits?path=modelspoorbaan.html')
