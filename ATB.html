@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>ATB</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+	<meta name="description" content="ATB">
+	<meta name="keywords" content="ATB, Automatische Trein Beïnvloeding, meettrein">
+	<meta name="author" content="Tijn Verdurmen">
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+	<link rel="icon" href="images/ATB.ico" type="image/x-icon">
+</head>
+
+<body class="ATB-page">
+
+
+	<!-- Page Wrapper -->
+	<div id="page-wrapper">
+		<!-- Header -->
+		<header id="header">
+			<h1><a href="index.html">Home</a></h1>
+			<nav id="nav">
+				<ul>
+					<li class="special">
+						<a href="#menu" class="menuToggle"><span>Menu</span></a>
+						<div id="menu">
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li><a href="MSVU.html">MSVU</a></li>
+								<li><a href="modelspoorbaan.html">Modelspoorbaan</a></li>
+								<li><a href="Website.html">Bouw je eigen Website</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Main -->
+		<article id="main">
+			<header>
+				<h2>Automatische Trein Beïnvloeding</h2>
+                <p>Ontwikkeling van de derde generatie ATB meettrein</p>
+            </header>
+            <section class="wrapper style5">
+							<div class="inner">
+                <section id="De achtergrond">
+										<h2>De achtergrond</h2>
+										<p>Wat is ATB? en hoe werkt het?
+                                            Meer hierover te vinden op de webpagina van mijn collega <a href="http://marcrpieters.nl/" target="_blank">Marc Pieters</a>
+										</p>
+										
+                <section id="Mijn rol hierin">
+										<h2>Wat is mijn rol hierin?</h2>
+										<p>Deze pagina gaat nog verder uitgebreid worden.</p>
+
+                
+			</header>
+			<section class="wrapper style5">
+			
+				<p id="laatst geüpdatet: " style="text-align: center; font-size: smaller;">Laatst bijgewerkt: <span id="last-updated-date"></span></p>
+									<script>
+										fetch('https://api.github.com/repos/TijnVer/website/commits?path=ATB.html')
+											.then(response => response.json())
+											.then(data => {
+												const lastCommitDate = new Date(data[0].commit.author.date);
+												document.getElementById('last-updated-date').textContent = lastCommitDate.toLocaleString('nl-NL', {
+													year: 'numeric',
+													month: 'long',
+													day: 'numeric',
+													hour: '2-digit',
+													minute: '2-digit'
+												});
+											})
+											.catch(error => {
+												console.error('Error fetching last commit date:', error);
+												document.getElementById('last-updated-date').textContent = 'Onbekend';
+											});
+									</script>
+			</section>
+		</article>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<p>Zie hier mijn social media platformen:</p>
+			<ul class="icons">
+				<li><a href="https://www.youtube.com/@Tijn_Tube" class="icon brands fa-youtube"><span
+							class="label">YouTube</span></a> <span style="font-size: smaller;">YouTube</span></li>
+				<li><a href="https://www.linkedin.com/in/tijn-verdurmen-647798186/"
+						class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a> <span style="font-size: smaller;">LinkedIn</span></li>
+				<li><a href="https://github.com/TijnVer?tab=repositories" class="icon brands fa-github"><span
+							class="label">GitHub</span></a> <span style="font-size: smaller;">GitHub</span></li>
+			</ul>
+		</footer>
+
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
