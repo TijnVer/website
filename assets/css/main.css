@@ -3862,6 +3862,14 @@ input, select, textarea {
 		height: 80vh;
 	}
 
+	.Resin_print-page #main > header {
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/AI-Trein_Resin.png");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/AI-Trein_Resin.png");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/AI-Trein_Resin.png");
+		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/AI-Trein_Resin.png");
+		height: 80vh;
+	}
+
 	@media screen and (max-width: 1280px) {
 		.msvu-page #main > header {
 			height: 60vh;
